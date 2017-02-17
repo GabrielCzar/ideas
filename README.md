@@ -1,3 +1,4 @@
-# Tutorial do [RailsGirls](railsgirls.com)
+# Tutorial Ruby On Rails
 
-- Versao pt-br:[RB] (http://www.maujor.com/railsgirlsguide)
+- Site principal: [RailsGirls](railsgirls.com)
+- Versao traduzida: [RB] (http://www.maujor.com/railsgirlsguide)
