@@ -12,6 +12,8 @@ gem 'rails', '~> 5.0.1'
 gem 'sqlite3'
 # Uploud de imagens
 gem 'carrierwave'
+#Foreigner para comentarios
+gem 'foreigner'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
