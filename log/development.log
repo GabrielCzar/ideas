@@ -931,3 +931,125 @@ Processing by IdeasController#index as HTML
 Completed 200 OK in 734ms (Views: 649.1ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/ideas" for 127.0.0.1 at 2017-02-21 00:07:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 232ms (Views: 207.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/uploads/idea/picture/2/thumb_626402d812306c61bad1b5cd146d2e5d.jpg" for 127.0.0.1 at 2017-02-21 00:07:53 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/idea/picture/2/thumb_626402d812306c61bad1b5cd146d2e5d.jpg"):
+  
+actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.1) lib/rails/engine.rb:522:in `call'
+puma (3.7.0) lib/puma/configuration.rb:226:in `call'
+puma (3.7.0) lib/puma/server.rb:578:in `handle_request'
+puma (3.7.0) lib/puma/server.rb:415:in `process_client'
+puma (3.7.0) lib/puma/server.rb:275:in `block in run'
+puma (3.7.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered collection of /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [17 times] (9.9ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (45.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.4.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (199.4ms)
+Started DELETE "/ideas/2" for 127.0.0.1 at 2017-02-21 00:08:01 -0300
+Processing by IdeasController#destroy as HTML
+  Parameters: {"authenticity_token"=>"8FJm0CuZYfRS1HuhZshsqXGCqw9uwmY0/hjKYlY+5raPYSE08OQ+Mw4pPiGhSFxXU6JgMvaGvNPD9y+1D0p+Qw==", "id"=>"2"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "ideas" WHERE "ideas"."id" = ?[0m  [["id", 2]]
+  [1m[35m (71.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ideas
+Completed 302 Found in 123ms (ActiveRecord: 71.6ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2017-02-21 00:08:01 -0300
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 51ms (Views: 49.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/new" for 127.0.0.1 at 2017-02-21 00:08:02 -0300
+Processing by IdeasController#new as HTML
+  Rendering ideas/new.html.erb within layouts/application
+  Rendered ideas/_form.html.erb (113.0ms)
+  Rendered ideas/new.html.erb within layouts/application (130.3ms)
+Completed 200 OK in 186ms (Views: 167.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/ideas" for 127.0.0.1 at 2017-02-21 00:08:24 -0300
+Processing by IdeasController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YUzIcErz6kykuAXq9KZBYf+btmPhki4nZ0SsTPJrjtIxKVq9f7akC43SDX5WUXMIXoEoHc+q9IpuLlIeAk9rPA==", "idea"=>{"name"=>"Teste", "description"=>"tessad dsdksadkasdaskdasdasndksandkasdkasdns  sakndakl", "picture"=>#<ActionDispatch::Http::UploadedFile:0x007f924a127878 @tempfile=#<Tempfile:/tmp/RackMultipart20170221-8734-1j12xaj.jpg>, @original_filename="b6fe437f724d2822fa2dc58620162066.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"idea[picture]\"; filename=\"b6fe437f724d2822fa2dc58620162066.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Create Idea"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ideas" ("name", "description", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Teste"], ["description", "tessad dsdksadkasdaskdasdasndksandkasdkasdns  sakndakl"], ["picture", "b6fe437f724d2822fa2dc58620162066.jpg"], ["created_at", 2017-02-21 03:08:24 UTC], ["updated_at", 2017-02-21 03:08:24 UTC]]
+  [1m[35m (57.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/ideas/3
+Completed 302 Found in 572ms (ActiveRecord: 57.6ms)
+
+
+Started GET "/ideas/3" for 127.0.0.1 at 2017-02-21 00:08:24 -0300
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  Rendered comments/_form.html.erb (12.8ms)
+  Rendered ideas/show.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 96ms (Views: 37.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2017-02-21 00:08:33 -0300
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 31ms (Views: 29.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/ideas/3" for 127.0.0.1 at 2017-02-21 00:08:38 -0300
+Processing by IdeasController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mIdea Load (0.2ms)[0m  [1m[34mSELECT  "ideas".* FROM "ideas" WHERE "ideas"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering ideas/show.html.erb within layouts/application
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."idea_id" = ?[0m  [["idea_id", 3]]
+  Rendered comments/_form.html.erb (3.3ms)
+  Rendered ideas/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 43ms (Views: 37.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/ideas" for 127.0.0.1 at 2017-02-21 00:08:43 -0300
+Processing by IdeasController#index as HTML
+  Rendering ideas/index.html.erb within layouts/application
+  [1m[36mIdea Load (0.3ms)[0m  [1m[34mSELECT "ideas".* FROM "ideas"[0m
+  Rendered ideas/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.3ms)
+
+
