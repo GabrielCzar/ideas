@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+# instalando Twitter Bootstrap version SASS
+gem 'bootstrap-sass'
 # Para autenticacao
 gem 'devise'
 # Uploud de imagens
