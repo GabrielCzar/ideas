@@ -12,7 +12,8 @@ gem 'rails', '~> 5.0.1'
 gem 'sqlite3'
 # Uploud de imagens
 gem 'carrierwave'
-
+# thumbnail
+gem 'mini_magick'
 #Foreigner para chave estrangeira
 # gem 'foreigner'
 # Use Puma as the app server
